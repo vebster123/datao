@@ -46,3 +46,4 @@
 - [Настройка интеграции VS с git] (http://www.malgreve.net/2014/02/27/visual-studio-github-integration-tutorial/)
 - [MaterialSkin] (https://github.com/IgnaceMaes/MaterialSkin)
 - [12 Tips To Speed-up Your Windows Forms Applications] (https://devcomponents.com/blog/?p=361)
+- [MongoDB installation] (https://www.youtube.com/watch?v=-8WM1gduEH8)

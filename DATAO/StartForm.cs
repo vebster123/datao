@@ -1,9 +1,8 @@
 ﻿using System;
-using MaterialSkin;
 using MaterialSkin.Controls;
 using Google.GData.Client;
-using System.Diagnostics;
 using Google.GData.Spreadsheets;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace DATAO
@@ -28,7 +27,7 @@ namespace DATAO
             string authorizationUrl = OAuthUtil.CreateOAuth2AuthorizationUrl(parameters);
 
             //Открываем у пользователя браузер
-            //Process.Start(authorizationUrl);
+            Process.Start(authorizationUrl);
         }
 
         private void StartForm_Load(object sender, EventArgs e)
@@ -38,16 +37,14 @@ namespace DATAO
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
-            /*
             parameters.AccessCode = gAuthFormTextField.Text;
             OAuthUtil.GetAccessToken(parameters);
 
             GOAuth2RequestFactory requestFactory =
                 new GOAuth2RequestFactory(null, "DATAO", parameters);
-                */
+
             SpreadsheetsService service = new SpreadsheetsService("DATAO");
-            //service.RequestFactory = requestFactory;
-            service.setUserCredentials("dataodevelop", "calendarapp");
+            service.RequestFactory = requestFactory;
 
             SpreadsheetQuery query = new SpreadsheetQuery();
             SpreadsheetFeed feed = service.Query(query);
